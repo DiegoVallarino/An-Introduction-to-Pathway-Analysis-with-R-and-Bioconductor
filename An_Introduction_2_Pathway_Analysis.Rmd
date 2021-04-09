@@ -1,6 +1,6 @@
 ---
 title: "An Introduction to Functional Analysis"
-author: "Alex Sanchez"
+author: "Diego Vallario based on Alex Sanchez work"
 date: "April 4th 2021"
 output:
   html_document:
@@ -289,7 +289,7 @@ data(geneList) # adds function "topDiffGenes"
 myGOData <- new("topGOdata", ontology="BP", 
                 allGenes=allMyGenes,
                 geneSel=topDiffGenes, nodeSize=10,  
-                annot= annFUN.db, affyLib="hgu133a.db")
+                annotation= annFUN.db, affyLib="hgu133a.db")
 
 Myenrichment_Fisher <- runTest(myGOData, algorithm= "classic", statistic="fisher")
 Myenrichment_Fisher
